@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Session2
 
 ## Challenge one description
@@ -17,9 +16,9 @@
 - Always use a shebang(#!) on top of your scripts; if excluded, the defualt shell will be used 
 
 - We write shell scripts to automate our command line interface(CLI)
-=======
+
 # bash-script-tutorial
 Bash scripts related to every session of this tutorial will be stored in isolated branches named after their session name. 
 ## How to use 
 You can access the main code and the challenge answer key related to every session at their own branch. 
->>>>>>> c1bd6596c4e2f408b563d620897f836606004941
+
