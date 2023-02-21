@@ -1,19 +1,22 @@
-# Session2
+# Session3
 
-## Challenge one description
+## Challenge two description
 
-1- **Write a script to print "welcome to this application, dude :)" to the screen (output)**
+1 - echo "this is a message to be stored in a file" then redirect its output to a file of your choice.
 
-2- **Make the file executable**
+2 - run a command that performs a task and redirect both of its error and output to the trash.
 
-3- **Run the file and get the output**
+3 - cat a file of your choice and get the last 3 lines of it.
+- you may use tail with a suitable flag to do such a thing. 
 
 ### Hints to remember
-- A bash script consists of a series of bash commands 
+- you input a command and you get an output; what you have entered using your keyboard is called stdin and what get as an output is called stdout.
 
-- In scripting languages like bash, commands are executed line by line and in order
+- if the command generated an error then the error output is called stderr. 
 
-- Always use a shebang(#!) on top of your scripts; if excluded, the defualt shell will be used 
+- In very simple terms, file descriptor A.K.A fd is an integer number somewhere on the OS that represents every file that is opened by a process.
+
+- `/proc/PID/fd` is the path which you can check FDs that belongs to a process where PID is the Process Identifier.
 
 - We write shell scripts to automate our command line interface(CLI)
 
