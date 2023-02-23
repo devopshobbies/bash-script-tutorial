@@ -1,25 +1,26 @@
-# Session3
+# Session4
 
-## Challenge two description
+## Challenge three description
 
-1 - echo "this is a message to be stored in a file" then redirect its output to a file of your choice.
+1. echo the usage of comments and try using a multi-line comment
 
-2 - run a command that performs a task and redirect both of its error and output to the trash.
+2. inside your main script write another script named exit_code.sh to do an optional task using  <<EOF 
+2.2 then make the file executable. Ensure that each part is spectified 
 
-3 - get the last 3 lines of it and redirect them to a file named lines.
-- you may use tail with a suitable flag to do such a thing. 
+3. install Nginx and get the first 3 lines of its conf using pipes.
+
+4. initialize a git directory somewhere in your system and add READ + LICENSE then use `git add .` .
+finally, commit them using `commit -m " initail commit"` . (optional)
+- You can certainly play with the output (redirection) of each command if needed :)
 
 ### Hints to remember
-- you input a command and you get an output; what you have entered using your keyboard is called stdin and what get as an output is called stdout.
+- `cmd &> /dev/null`, `cmd > /dev/null 2>&1` and `cmd > /dev/null 2> /dev/null` are identical.
 
-- if the command generated an error then the error output is called stderr. 
+- `2>&1` is considered and read from **right to left** not left to right 
 
-- In very simple terms, file descriptor A.K.A fd is an integer number somewhere in the OS that represents every file that is opened by a process.
+- if the return (exit) code of an operation is non-zere it has failed otherwise, it's been successful. 
 
-- `/proc/PID/fd` is the path which you can check FDs that belongs to a process where PID is the Process Identifier.
-
-- 1> redirects stdout and 2> stderr and &> redirects both.
-
+- you can use <<EOF with pipe as well.
 # bash-script-tutorial
 Bash scripts related to every session of this tutorial will be stored in isolated branches named after their session name. 
 ## How to use 
