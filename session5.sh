@@ -1,40 +1,46 @@
 #!/bin/bash
 
-VARIABLE_NAME="value"
+variable_name="value"
 
-NAME="Ali"
+name="Amir"
+age=25
+# NAME="Amir"
 
-AGE=25
-# stores the output of a command which in this case is the number of files we have
-file_count=$(ls -l | wc -l )
+# echo "your family name is ${name}i, and you are ${age} years old"
 
-# use ${var_name} when mixed with extra data
-echo "Your name is ${NAME}, and you are ${AGE}"
-echo $file_count
+# This is how you can do basic math and operation and store it on a variable
+val=`expr 2 + 2`
+echo "Total value : $val"
 
-#used to ask for an input from the user
-read -p "what's your name? " NAME
+# as said in the video you can store output of commands, too. use $()
+number_of_files=$(ls -l | wc -l)
+echo "there are ${number_of_files} in this directory"
 
-echo $NAME
+# read -p "what's your name? " name
+# echo "how old are you? "
+# read age
+# echo $name $age     
 
-#----------------------------------------------------------------
-AGE=20
-NAME="Ali"
-#checks if the user is older than 18 if not check if their name is Ali
-if [ $AGE -lt 18 ]; then
-    echo "you are illegal"
-elif [ $NAME != "Ali" ]; then
-    echo "you are not Ali so we don't love you"
+# ----------------------------------------------------------------
+
+# if [ condition ]; then
+#  echo "this what you would like to do"
+
+# fi
+age=18
+name="SHAYAN"
+if [ $age -lt 18 ]; then
+echo "you are not eligible, since you are ${age} years old"
+elif [ $name != "Ehsan" ]; then
+echo "you are not eligible, since you are ${name} not Ehsan"
 else
-    echo "welcome to the club, buddy"
+ echo "welcome to the club"
 fi
 
-# you can also write if inline code
+# ----------------------------------------------------------------
 
-if (( $NAME == "Ali" )); then echo "You are so lucky"; fi 
+#arithmetic opretors
+# -lt -gt -eq -ne -ge -le
 
-# arithmetic operators
-#-lt -gt -ge -le -eq -ne
-
-#string operators/validation
-#==,=, !=
+#string opretors
+# =, != 

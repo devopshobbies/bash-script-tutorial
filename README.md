@@ -15,9 +15,9 @@ check if their major is "Engineering" (elif) then tell them "You have to study E
 
 - if you use variable with extra data such as String(concatenation) you should enclose the variable like `"some data ${variable_name}, some other data"`
 
-- variables are case sensitive and you should define them with UPPERCASE 
+- variables are case sensitive and you should define them with UPPERCASE when declaring a shell or environment varaiable. 
 
-- arithmetic operators including ` -ne, -eq, -gt, -lt,etc` are solely used for checking numbers 
+- arithmetic operators including ` -ne, -eq, -gt, -lt,etc` are solely used for checking numbers.
 
 - leave some space in condition part when using if and elif is neccessary.
 
