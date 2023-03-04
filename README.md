@@ -1,25 +1,35 @@
-# Session6
+# Session7
 
-## Challenge five description
+## Challenge six description
 
-- 1 . ask the user for a number between 0-100
-- 2 . validate the number and check if it's entered correctly, otherwise throw an error message and a non-zero code.
+### Part 1: Reading user input and performing actions based on input.
 
-- 3 . at this stage, ask the user for a path to an optional file
-  verify if the file exists or is readable. If it didn't exist or wasn't readable, you should throw an error message and a non-zero code, same as the first step.
-- 4 . at last, echo the variable that holds the number for you then redirect it to the path and give the user the path to the file. Exit with zero code. That's it! Good luck!
+- The script prompts the user to enter their favorite color.
+- It then uses a `case` statement to check if the input is a primary color (red, blue, yellow) or a secondary color (green, orange, purple).
+- remember (red, blue, yellow) should be accepted case-insesitive.
+- The script outputs a message based on the color input.
+
+### Part 2: Looping through a sequence of numbers and outputting them.
+
+- The script uses a for loop to iterate through the numbers 1 to 10.
+- It outputs each number to the console using the echo command.
 
 ### Hints to remember
 
-- you can use either `[[ ]]` or `[ ]` when checking for condition but ensure that you know the diffrence.
+- Always add comments to your script to explain what each section is doing. This makes it easier for others to understand your code and for you to come back to it later.
 
-- when statement includes ||/-o the command will be executed if one of the conditions became True whereas when it comes to &&/-a both conditions must be True.
+- Use descriptive variable names that are easy to understand. This makes your code easier to read and debug.
 
-- `-f` Unix operator, solely checks for regular files but `-e` checks for the existance of all files regardless of their type.
+- Test your script with different input values to make sure it works as expected.
 
-- always use `exit integer` in your commands to call an exit systemcall and throw the exit code.
+- Use exit codes to indicate success or failure of your script. An exit code of 0 means success, while any other value means failure.
 
-- you can checkot this [tutorial ](https://www.tutorialspoint.com/unix/unix-basic-operators.htm#)to learn more about Unix operators.
+- Use conditional statements like if/else and case to perform different actions based on the user's input.
+- Use loops like for and while to repeat certain actions multiple times.
+
+- Use sleep to pause the execution of your script for a certain amount of time.
+
+- Always validate user input to prevent errors or unexpected behavior.
 
 # bash-script-tutorial
 
