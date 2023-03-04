@@ -2,17 +2,19 @@
 
 ## Challenge six description
 
-### Part 1: Reading user input and performing actions based on input.
+### Part 1: Bash Script with Arrays
 
-- The script prompts the user to enter their favorite color.
-- It then uses a `case` statement to check if the input is a primary color (red, blue, yellow) or a secondary color (green, orange, purple).
-- remember (red, blue, yellow) should be accepted case-insesitive.
-- The script outputs a message based on the color input.
+- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
 
-### Part 2: Looping through a sequence of numbers and outputting them.
+### Part 2: Bash Script with Loops
 
-- The script uses a for loop to iterate through the numbers 1 to 10.
-- It outputs each number to the console using the echo command.
+- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
+
+### Part 3: Bash Script with Positional Arguments
+
+- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
+
+- Note : The special variable `$#` is used to get the number of arguments.
 
 ### Hints to remember
 
