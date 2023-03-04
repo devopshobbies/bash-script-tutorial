@@ -1,6 +1,6 @@
-# Session7
+# Session8
 
-## Challenge six description
+## Challenge seven description
 
 ### Part 1: Bash Script with Arrays
 
@@ -18,20 +18,15 @@
 
 ### Hints to remember
 
-- Always add comments to your script to explain what each section is doing. This makes it easier for others to understand your code and for you to come back to it later.
+- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
 
-- Use descriptive variable names that are easy to understand. This makes your code easier to read and debug.
+- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
 
-- Test your script with different input values to make sure it works as expected.
+- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
 
-- Use exit codes to indicate success or failure of your script. An exit code of 0 means success, while any other value means failure.
+- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
 
-- Use conditional statements like if/else and case to perform different actions based on the user's input.
-- Use loops like for and while to repeat certain actions multiple times.
-
-- Use sleep to pause the execution of your script for a certain amount of time.
-
-- Always validate user input to prevent errors or unexpected behavior.
+- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
 
 # bash-script-tutorial
 
