@@ -1,32 +1,24 @@
-# Session8
+# Session19
 
-## Challenge seven description
+## Challenge eighteen description
 
-### Part 1: Bash Script with Arrays
+- Challenge 1:
+  Create a cron job that runs every day at 8:30am and runs a script called "backup.sh" located in the home directory.
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+- Challenge 2:
+  Create a cron job that runs every hour on the hour and runs a command that clears the contents of a log file called "access.log".
 
-### Part 2: Bash Script with Loops
-
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
-
-### Part 3: Bash Script with Positional Arguments
-
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+- Challenge 3:
+  Create a cron job that runs every weekday at 5pm and sends an email to a specific email address with the contents of a log file called "error.log".
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- **Not specifying the full path to files or commands in cron jobs.** When creating a cron job, it's important to specify the full path to any files or commands that the job requires. This is because the cron job environment may not have the same $PATH variable as your user environment, which can cause the job to fail if it can't find the required files or commands.
+  To avoid this issue, always specify the full path to files and commands in your cron job. For example, instead of using some_command, use /usr/bin/some_command.
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- **Not checking the cron job logs for errors.**
+  When creating a cron job, it's important to check the logs to ensure that the job is running correctly and to troubleshoot any errors that may occur. One common mistake is to not check the logs for errors, which can make it difficult to diagnose and fix issues. The logs for cron jobs are usually stored in /var/log/syslog or /var/log/cron.log, depending on your system.
+  Make sure to check the logs regularly and to investigate any errors or warnings that are reported. You can also redirect the output of your cron job to a log file using the >> operator, like this: \_ \* \* \* \* some_command >> /var/log/myjob.log 2>&1.
 
 # bash-script-tutorial
 
