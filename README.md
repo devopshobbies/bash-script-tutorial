@@ -1,32 +1,38 @@
-# Session8
+# Session18
 
-## Challenge seven description
+## Challenge seventeen description
 
-### Part 1: Bash Script with Arrays
+1. Create a Bash script that creates a log file and writes a message to /var/log/custom.log every 10 seconds.
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+2. create a systemd unit file for the script so that it can be run as a service.
 
-### Part 2: Bash Script with Loops
+3. Open a text editor and create a new file named logger.service .
 
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
+4. Save the file and exit the text editor.
+   Copy the logger.service file to the /etc/systemd/system/ directory.
 
-### Part 3: Bash Script with Positional Arguments
+5. Run the command `sudo systemctl daemon-reload` to reload the systemd configuration.
 
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
+6. Start the logger service by running the command `sudo systemctl start logger.service`.
 
-- Note : The special variable `$#` is used to get the number of arguments.
+7. Check the status of the service by running the command `sudo systemctl status logger.service`. It should show that the service is active and running.
+
+8. Verify that the logging is working correctly by checking the /var/log/custom.log file for new log entries.
+
+9. To stop the service, run the command `sudo systemctl stop logger.service`.
+
+10. To enable the service to start automatically on boot, run the command `sudo systemctl enable logger.service`
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- **Not using the correct syntax for grep in systemd unit files.** When using grep to search for a string in a systemd unit file, it's important to use the correct syntax to ensure that the search is performed correctly.
+  One common mistake is to use the grep command without the -E or --extended-regexp option, which can cause the search to miss certain patterns.
+  For example, if you want to search for a string that contains a dot (.), you should use the -E option with the search pattern enclosed in quotes, like this: grep -E "string.with.dot" /etc/systemd/system/myunit.service.
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- **Not checking the systemd logs for errors.**
+  When using systemd to manage services, it's important to check the logs to ensure that the service is running correctly and to troubleshoot any errors that may occur.
+  One common mistake is to not check the logs for errors, which can make it difficult to diagnose and fix issues. You can view the logs for a systemd unit using the journalctl command.
+  For instance, to view the logs for the myunit.service unit, you can use the command journalctl -u myunit.service. Make sure to check the logs regularly and to investigate any errors or warnings that are reported.
 
 # bash-script-tutorial
 
