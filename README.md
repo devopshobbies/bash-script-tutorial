@@ -1,32 +1,21 @@
-# Session8
+# Session12
 
-## Challenge seven description
+## Challenge eleven description
 
-### Part 1: Bash Script with Arrays
+- Challenge 1:
+  Write a curl command to upload a file to a server using HTTP POST method with a custom header and verbose output. Assume the server endpoint is "https://example.com/upload" and the file path is "/path/to/file". Use "My-Header: value" as the custom header.
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+- Challenge 2:
+  Write a curl command to test if a website's SSL certificate is valid. Assume the website URL is "https://example.com".
 
-### Part 2: Bash Script with Loops
-
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
-
-### Part 3: Bash Script with Positional Arguments
-
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+- Challenge 3:
+  Write a curl command to scrape data from a website and save it to a file. Assume the website URL is "https://example.com" and you want to save the HTML content to a file called "output.html".
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- It's important to handle errors that may occur. If you don't handle errors, your script may continue executing even if the request fails, which can cause unexpected behavior. To handle errors, you can use the -f or --fail option, which causes curl to exit with an error status code if the request fails.
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- to make requests with URLs that contain special characters, it's important to properly quote the URL to avoid unexpected behavior. If you don't quote the URL, special characters such as spaces, ampersands, and question marks can be interpreted by the shell and cause issues. To quote the URL, you can use single quotes (') around the entire URL, or you can escape special characters using backslashes (\).
 
 # bash-script-tutorial
 
