@@ -1,32 +1,27 @@
-# Session8
+# Session20
 
-## Challenge seven description
+## Challenge nineteen description
 
-### Part 1: Bash Script with Arrays
+- Challenge 1:
+  Create a script that will log the date and time each time it is executed, with the log entries appended to a file called "script.log" in the same directory as the script.
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+- Challenge 2:
+  Create a script that will log any errors that occur during its execution, with the log entries appended to a file called "error.log" in the same directory as the script.
 
-### Part 2: Bash Script with Loops
+- Challenge 3:
+  Write a bash script that uses the logger command to log a message to syslog with the following information: the current date and time, the username of the user running the script, and the message "Script executed successfully". The message should be logged with the "notice" priority level and with the facility "local0".
 
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
-
-### Part 3: Bash Script with Positional Arguments
-
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+- The whoami command is used to get the username of the user running the script.
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- **Overwriting log files instead of appending to them.**
+  When logging output to a file, it's important to ensure that you're appending to the file and not overwriting it. One common mistake is to use the single > operator, which overwrites the file with the new output each time the command is run.
+  To avoid this, use the double >> operator to append the output to the end of the file, like this: command >> logfile.
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- **Not including enough information in the log messages.**
+  When logging output to a file, it's important to include enough information in the log messages to make them useful for debugging and troubleshooting. One common mistake is to include only vague or incomplete information, which can make it difficult to diagnose issues.
+  To avoid this, include relevant information such as timestamps, error messages, and command output in your log messages. For example: echo "$(date): Command output: $(command)" >> logfile.
 
 # bash-script-tutorial
 
