@@ -1,23 +1,41 @@
-# Session9
+# Session10
 
-## Challenge eight description
+## Challenge nine description
 
-- Challenge 1: Write a function that takes two arguments and returns their sum.
+- Create a Bash script that presents the user with a menu of arithmetic operations to choose from. The script should use the select command to display the options and the case statement to perform the selected operation. The available operations should be "add", "subtract", "multiply", "divide", and "quit".
 
-- Challenge 2: Write a function that takes a string as an argument and returns the length of the string.
+- For each operation, the script should prompt the user to enter two numbers and then display the result of the operation in the format "number1 operator number2 = result". The script should handle division by zero gracefully by displaying an appropriate error message.
 
-- Challenge 3: Write a function that takes an array of integers as an argument and returns the largest number in the array.
+- The script should continue to display the menu and perform operations until the user chooses "quit".
 
-- Challenge 4: Write a function that takes a directory path as an argument and lists all the files and subdirectories in the directory.
+## sample output:
 
-- Challenge 5: Write a function that takes a filename as an argument and checks if the file exists. If it does, print "File exists", otherwise print "File does not exist".
+```
+Select the operation:
+
+1. add
+2. subtract
+3. multiply
+4. divide
+5. quit
+   #? 1
+   Enter the first number: 10
+   Enter the second number: 20
+   10 + 20 = 30
+   #? 3
+   Enter the first number: 5
+   Enter the second number: 7
+   5 \* 7 = 35
+   #? 4
+   Enter the first number: 20
+   Enter the second number: 0
+   Error: division by zero
+   #? 5
+```
 
 ### Hints to remember
 
-- If you don't use local, the variable will be created as a global variable, which can cause unintended consequences and potentially overwrite existing variables outside of the function. To avoid this, always use local to declare variables inside functions.
-
-- In Bash, the return value of a function is the exit status of the last command executed in the function. If you don't explicitly return a value from the function, it will return the exit status of the last command in the function.
-  This can cause confusion and unexpected behavior if you're not careful. To properly handle return values from functions, use the return statement to explicitly return a value, and use the $? variable to capture the return value when calling the function.
+- Always modify `PS3` variable to customize your menu prompt
 
 # bash-script-tutorial
 
