@@ -1,32 +1,41 @@
-# Session8
+# Session10
 
-## Challenge seven description
+## Challenge nine description
 
-### Part 1: Bash Script with Arrays
+- Create a Bash script that presents the user with a menu of arithmetic operations to choose from. The script should use the select command to display the options and the case statement to perform the selected operation. The available operations should be "add", "subtract", "multiply", "divide", and "quit".
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+- For each operation, the script should prompt the user to enter two numbers and then display the result of the operation in the format "number1 operator number2 = result". The script should handle division by zero gracefully by displaying an appropriate error message.
 
-### Part 2: Bash Script with Loops
+- The script should continue to display the menu and perform operations until the user chooses "quit".
 
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
+## sample output:
 
-### Part 3: Bash Script with Positional Arguments
+```
+Select the operation:
 
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+1. add
+2. subtract
+3. multiply
+4. divide
+5. quit
+   #? 1
+   Enter the first number: 10
+   Enter the second number: 20
+   10 + 20 = 30
+   #? 3
+   Enter the first number: 5
+   Enter the second number: 7
+   5 \* 7 = 35
+   #? 4
+   Enter the first number: 20
+   Enter the second number: 0
+   Error: division by zero
+   #? 5
+```
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
-
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- Always modify `PS3` variable to customize your menu prompt
 
 # bash-script-tutorial
 
