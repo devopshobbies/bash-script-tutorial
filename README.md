@@ -1,27 +1,22 @@
-# Session14
+# Session15
 
-## Challenge thirteen description
+## Challenge fourteen description
 
-1. Prompt the user to enter the type of file they have (e.g. jpg, png, txt).
-2. Loop through all files in the current directory with the specified file type.
-3. Prompt the user to choose the operation they want to perform on each file - copy or move.
-4. If the user chooses to move the file, prompt them to confirm if they really want to move the file.
-5. If the user confirms, create a new directory with the name of the file type if it doesn't exist already.
-6. Move the file to the directory.
-7. If the user chooses to copy the file, create a new directory with the name of the file type if it doesn't exist already.
-8. Copy the file to the directory.
-9. If the user chooses anything other than "yes" or "y" to confirm the operation, exit the script with an error code.
-10. After all files are processed, exit the script with a success code.
+- Challenge 1: Use grep to find all lines in a file containing the word "apple".
+
+- Challenge 2: Find all lines in a file containing the word "banana", and output the results to a new file called "banana_lines.txt".
+
+- Challenge 3 : To find all lines in a file containing a date in the format "MM/DD/YYYY", use the command:
+
+- Challenge 4: find all lines in a file that start with the word "From:"
+
+- You can use file.txt as an example
 
 ### Hints to remember
 
-- When using wildcards such as \* or ? in a Bash command, it's important to properly quote or escape them. Otherwise, the shell may interpret the wildcards as file globbing patterns and expand them into a list of file names before executing the command. This can lead to unexpected behavior if the command is not designed to handle multiple file names as arguments. To prevent the shell from expanding the wildcards, you can use quotes (" or ') or escape characters (\) to surround the wildcard pattern.
+- grep has many options that can affect its behavior, and it's important to use the appropriate options for the task at hand. For instance, if you're searching for a pattern in a directory recursively, you should use the -r option to search recursively. If you want to count the number of matches, you should use the -c option. If you want to search for a pattern ignoring the case, you should use the -i option. Make sure to read the man page (man grep) or the help documentation
 
-- When using wildcards with root privileges, such as with the rm command, it's important to be very careful.
-  A single mistake with a wildcard can lead to the deletion of multiple files or even the entire file system.
-  To avoid accidentally deleting important files, it's a good idea to use the -i option with the rm command to prompt for confirmation before deleting each file.
-  Additionally, you can use the -- option to signify the end of options and prevent any arguments that follow from being interpreted as options.
-  This can help prevent accidental deletion of files that have names starting with a hyphen (-).
+- When searching for a pattern with grep, it's important to anchor the pattern properly to avoid unintended matches. For a striking example, if you're searching for the pattern `the` in a file, you may accidentally match words such as `them` or `there` if you don't anchor the pattern with word boundaries (\b). Similarly, if you're searching for a pattern that contains special characters such as `.` or `\*`, you may need to escape them with a backslash (\) to avoid unintended matches. Make sure to properly anchor the pattern to match only the desired text.
 
 # bash-script-tutorial
 
