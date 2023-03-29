@@ -1,24 +1,27 @@
-# Session19
+# Session20
 
-## Challenge eighteen description
+## Challenge nineteen description
 
 - Challenge 1:
-  Create a cron job that runs every day at 8:30am and runs a script called "backup.sh" located in the home directory.
+  Create a script that will log the date and time each time it is executed, with the log entries appended to a file called "script.log" in the same directory as the script.
 
 - Challenge 2:
-  Create a cron job that runs every hour on the hour and runs a command that clears the contents of a log file called "access.log".
+  Create a script that will log any errors that occur during its execution, with the log entries appended to a file called "error.log" in the same directory as the script.
 
 - Challenge 3:
-  Create a cron job that runs every weekday at 5pm and sends an email to a specific email address with the contents of a log file called "error.log".
+  Write a bash script that uses the logger command to log a message to syslog with the following information: the current date and time, the username of the user running the script, and the message "Script executed successfully". The message should be logged with the "notice" priority level and with the facility "local0".
 
-8. Verify that the logging is working correctly by checking the /var/log/custom.log file for new log entries.
+- The whoami command is used to get the username of the user running the script.
 
-- **Not specifying the full path to files or commands in cron jobs.** When creating a cron job, it's important to specify the full path to any files or commands that the job requires. This is because the cron job environment may not have the same $PATH variable as your user environment, which can cause the job to fail if it can't find the required files or commands.
-  To avoid this issue, always specify the full path to files and commands in your cron job. For example, instead of using some_command, use /usr/bin/some_command.
+### Hints to remember
 
-- **Not checking the cron job logs for errors.**
-  When creating a cron job, it's important to check the logs to ensure that the job is running correctly and to troubleshoot any errors that may occur. One common mistake is to not check the logs for errors, which can make it difficult to diagnose and fix issues. The logs for cron jobs are usually stored in /var/log/syslog or /var/log/cron.log, depending on your system.
-  Make sure to check the logs regularly and to investigate any errors or warnings that are reported. You can also redirect the output of your cron job to a log file using the >> operator, like this: \_ \* \* \* \* some_command >> /var/log/myjob.log 2>&1.
+- **Overwriting log files instead of appending to them.**
+  When logging output to a file, it's important to ensure that you're appending to the file and not overwriting it. One common mistake is to use the single > operator, which overwrites the file with the new output each time the command is run.
+  To avoid this, use the double >> operator to append the output to the end of the file, like this: command >> logfile.
+
+- **Not including enough information in the log messages.**
+  When logging output to a file, it's important to include enough information in the log messages to make them useful for debugging and troubleshooting. One common mistake is to include only vague or incomplete information, which can make it difficult to diagnose issues.
+  To avoid this, include relevant information such as timestamps, error messages, and command output in your log messages. For example: echo "$(date): Command output: $(command)" >> logfile.
 
 # bash-script-tutorial
 
