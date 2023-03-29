@@ -1,32 +1,27 @@
-# Session8
+# Session14
 
-## Challenge seven description
+## Challenge thirteen description
 
-### Part 1: Bash Script with Arrays
-
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
-
-### Part 2: Bash Script with Loops
-
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
-
-### Part 3: Bash Script with Positional Arguments
-
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+1. Prompt the user to enter the type of file they have (e.g. jpg, png, txt).
+2. Loop through all files in the current directory with the specified file type.
+3. Prompt the user to choose the operation they want to perform on each file - copy or move.
+4. If the user chooses to move the file, prompt them to confirm if they really want to move the file.
+5. If the user confirms, create a new directory with the name of the file type if it doesn't exist already.
+6. Move the file to the directory.
+7. If the user chooses to copy the file, create a new directory with the name of the file type if it doesn't exist already.
+8. Copy the file to the directory.
+9. If the user chooses anything other than "yes" or "y" to confirm the operation, exit the script with an error code.
+10. After all files are processed, exit the script with a success code.
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- When using wildcards such as \* or ? in a Bash command, it's important to properly quote or escape them. Otherwise, the shell may interpret the wildcards as file globbing patterns and expand them into a list of file names before executing the command. This can lead to unexpected behavior if the command is not designed to handle multiple file names as arguments. To prevent the shell from expanding the wildcards, you can use quotes (" or ') or escape characters (\) to surround the wildcard pattern.
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- When using wildcards with root privileges, such as with the rm command, it's important to be very careful.
+  A single mistake with a wildcard can lead to the deletion of multiple files or even the entire file system.
+  To avoid accidentally deleting important files, it's a good idea to use the -i option with the rm command to prompt for confirmation before deleting each file.
+  Additionally, you can use the -- option to signify the end of options and prevent any arguments that follow from being interpreted as options.
+  This can help prevent accidental deletion of files that have names starting with a hyphen (-).
 
 # bash-script-tutorial
 
