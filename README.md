@@ -1,32 +1,22 @@
-# Session8
+# Session15
 
-## Challenge seven description
+## Challenge fourteen description
 
-### Part 1: Bash Script with Arrays
+- Challenge 1: Use grep to find all lines in a file containing the word "apple".
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+- Challenge 2: Find all lines in a file containing the word "banana", and output the results to a new file called "banana_lines.txt".
 
-### Part 2: Bash Script with Loops
+- Challenge 3 : To find all lines in a file containing a date in the format "MM/DD/YYYY", use the command:
 
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
+- Challenge 4: find all lines in a file that start with the word "From:"
 
-### Part 3: Bash Script with Positional Arguments
-
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+- You can use file.txt as an example
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- grep has many options that can affect its behavior, and it's important to use the appropriate options for the task at hand. For instance, if you're searching for a pattern in a directory recursively, you should use the -r option to search recursively. If you want to count the number of matches, you should use the -c option. If you want to search for a pattern ignoring the case, you should use the -i option. Make sure to read the man page (man grep) or the help documentation
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- When searching for a pattern with grep, it's important to anchor the pattern properly to avoid unintended matches. For a striking example, if you're searching for the pattern `the` in a file, you may accidentally match words such as `them` or `there` if you don't anchor the pattern with word boundaries (\b). Similarly, if you're searching for a pattern that contains special characters such as `.` or `\*`, you may need to escape them with a backslash (\) to avoid unintended matches. Make sure to properly anchor the pattern to match only the desired text.
 
 # bash-script-tutorial
 

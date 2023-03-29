@@ -1,1 +1,0 @@
-Note: In Exercise 3, $# represents the number of positional arguments passed to the script, $0 represents the name of the script, $1 and $2 represent the first and second positional arguments, respectively. The >&2 redirects the error messages to the standard error output instead of the standard output.
