@@ -1,18 +1,27 @@
-# Session16
+# Session17
 
-## Challenge fifteen description
+## Challenge sixteen description
 
-- Challenge 1 : Using the awk command, print the first column of a comma-separated values (CSV) file.
+- Challenge 1:
+  Replace all occurrences of the word "hello" with "hi" in a file named "input.txt" and save the modified file as "output.txt".
 
-- Challenge 2: Use awk to print the second field of a file separated by ":".
+- Challenge 2:
+  Remove all blank lines from a file named "input.txt" and save the modified file as "output.txt".
 
-- Challenge 3: Use awk to find the average of the numbers in the fourth column of a file called "numbers.txt", and print the result to the terminal.
+- Challenge 3:
+  Replace all occurrences of the word "apple" with "orange" only on lines that start with the word "fruit" in a file named "input.txt" and save the modified file as "output.txt".
 
 ### Hints to remember
 
-- By default, awk uses whitespace as the field separator when processing input data. If your data is delimited by a different character, such as a comma or a semicolon, you need to specify the appropriate field separator using the -F option. For example, to process a CSV file, you should use the command awk -F',' '{print $1}' file.csv to extract the first field of each record. Make sure to specify the appropriate field separator to correctly process your data.
+- **Not using the appropriate delimiters:** sed uses delimiters to separate the command and its arguments.
+  By default, / is used as the delimiter, but you can use any character that is not present in the pattern or replacement.
+  If your pattern or replacement contains the delimiter character, you need to escape it with a backslash (\).
+  For example, to replace all occurrences of the string foo/bar with baz, you can use the command sed 's/foo\/bar/baz/g' file.txt.
+  Make sure to use the appropriate delimiters and escape any delimiter characters in the pattern or replacement.
 
-- **Not understanding the difference between print and printf**: awk has two ways to output text: print and printf. print outputs a newline character at the end of each record, while printf does not. printf allows you to format the output using C-style formatting codes, such as %s for strings and %d for integers. Make sure to use the appropriate command depending on the output you need. If you need to output text with a newline at the end of each record, use print. If you need to format the output, use printf.
+- **Using the wrong command or syntax:** sed has many commands and options that can be used to perform different tasks, and it's important to use the appropriate command or syntax for the task at hand.
+  For example, if you want to delete a line that matches a pattern, you should use the d command. If you want to substitute a pattern with a replacement, you should use the s command.
+  If you want to perform a substitution globally, you should use the g option. Make sure to read the man page (man sed) or the help documentation (sed --help) to understand all the available commands and options, and use the appropriate syntax for your task.
 
 # bash-script-tutorial
 
