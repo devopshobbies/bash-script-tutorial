@@ -1,32 +1,27 @@
-# Session8
+# Session17
 
-## Challenge seven description
+## Challenge sixteen description
 
-### Part 1: Bash Script with Arrays
+- Challenge 1:
+  Replace all occurrences of the word "hello" with "hi" in a file named "input.txt" and save the modified file as "output.txt".
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+- Challenge 2:
+  Remove all blank lines from a file named "input.txt" and save the modified file as "output.txt".
 
-### Part 2: Bash Script with Loops
-
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
-
-### Part 3: Bash Script with Positional Arguments
-
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+- Challenge 3:
+  Replace all occurrences of the word "apple" with "orange" only on lines that start with the word "fruit" in a file named "input.txt" and save the modified file as "output.txt".
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- **Not using the appropriate delimiters:** sed uses delimiters to separate the command and its arguments.
+  By default, / is used as the delimiter, but you can use any character that is not present in the pattern or replacement.
+  If your pattern or replacement contains the delimiter character, you need to escape it with a backslash (\).
+  For example, to replace all occurrences of the string foo/bar with baz, you can use the command sed 's/foo\/bar/baz/g' file.txt.
+  Make sure to use the appropriate delimiters and escape any delimiter characters in the pattern or replacement.
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- **Using the wrong command or syntax:** sed has many commands and options that can be used to perform different tasks, and it's important to use the appropriate command or syntax for the task at hand.
+  For example, if you want to delete a line that matches a pattern, you should use the d command. If you want to substitute a pattern with a replacement, you should use the s command.
+  If you want to perform a substitution globally, you should use the g option. Make sure to read the man page (man sed) or the help documentation (sed --help) to understand all the available commands and options, and use the appropriate syntax for your task.
 
 # bash-script-tutorial
 
