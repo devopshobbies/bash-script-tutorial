@@ -1,22 +1,18 @@
-# Session15
+# Session16
 
-## Challenge fourteen description
+## Challenge fifteen description
 
-- Challenge 1: Use grep to find all lines in a file containing the word "apple".
+- Challenge 1 : Using the awk command, print the first column of a comma-separated values (CSV) file.
 
-- Challenge 2: Find all lines in a file containing the word "banana", and output the results to a new file called "banana_lines.txt".
+- Challenge 2: Use awk to print the second field of a file separated by ":".
 
-- Challenge 3 : To find all lines in a file containing a date in the format "MM/DD/YYYY", use the command:
-
-- Challenge 4: find all lines in a file that start with the word "From:"
-
-- You can use file.txt as an example
+- Challenge 3: Use awk to find the average of the numbers in the fourth column of a file called "numbers.txt", and print the result to the terminal.
 
 ### Hints to remember
 
-- grep has many options that can affect its behavior, and it's important to use the appropriate options for the task at hand. For instance, if you're searching for a pattern in a directory recursively, you should use the -r option to search recursively. If you want to count the number of matches, you should use the -c option. If you want to search for a pattern ignoring the case, you should use the -i option. Make sure to read the man page (man grep) or the help documentation
+- By default, awk uses whitespace as the field separator when processing input data. If your data is delimited by a different character, such as a comma or a semicolon, you need to specify the appropriate field separator using the -F option. For example, to process a CSV file, you should use the command awk -F',' '{print $1}' file.csv to extract the first field of each record. Make sure to specify the appropriate field separator to correctly process your data.
 
-- When searching for a pattern with grep, it's important to anchor the pattern properly to avoid unintended matches. For a striking example, if you're searching for the pattern `the` in a file, you may accidentally match words such as `them` or `there` if you don't anchor the pattern with word boundaries (\b). Similarly, if you're searching for a pattern that contains special characters such as `.` or `\*`, you may need to escape them with a backslash (\) to avoid unintended matches. Make sure to properly anchor the pattern to match only the desired text.
+- **Not understanding the difference between print and printf**: awk has two ways to output text: print and printf. print outputs a newline character at the end of each record, while printf does not. printf allows you to format the output using C-style formatting codes, such as %s for strings and %d for integers. Make sure to use the appropriate command depending on the output you need. If you need to output text with a newline at the end of each record, use print. If you need to format the output, use printf.
 
 # bash-script-tutorial
 
