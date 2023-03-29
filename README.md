@@ -1,21 +1,25 @@
-# Session12
+# Session13
 
-## Challenge eleven description
+## Challenge twelve description
 
 - Challenge 1:
-  Write a curl command to upload a file to a server using HTTP POST method with a custom header and verbose output. Assume the server endpoint is "https://example.com/upload" and the file path is "/path/to/file". Use "My-Header: value" as the custom header.
+  Modify the net-utils script to allow the user to input a domain name as an argument, and then use the 'ping' command to check the availability of that domain. The script should output whether the domain is available or not.
+
+- look for "time" in the lines to determine if it's available or not.
 
 - Challenge 2:
-  Write a curl command to test if a website's SSL certificate is valid. Assume the website URL is "https://example.com".
+  Modify the net-utils script to check the status of a list of ports provided in a text file. The script should output the status of each port in the file.
 
 - Challenge 3:
-  Write a curl command to scrape data from a website and save it to a file. Assume the website URL is "https://example.com" and you want to save the HTML content to a file called "output.html".
+  Modify the net-utils script to output the number of connections to a specific port provided by the user. The script should ask the user to enter the port number, and then output the number of connections to that port.
 
 ### Hints to remember
 
-- It's important to handle errors that may occur. If you don't handle errors, your script may continue executing even if the request fails, which can cause unexpected behavior. To handle errors, you can use the -f or --fail option, which causes curl to exit with an error status code if the request fails.
+- Before using a net-util such as ping, traceroute, or netstat in your Bash script, it's important to check if the utility is installed on the system.
+  run `command -v` to ensure and if it's not installed and returns non-zero exit code then `sudo apt-get install -y net-tools` on Ubuntu/Debian to install them. Some tools like traceroute are not included in net-tools.
 
-- to make requests with URLs that contain special characters, it's important to properly quote the URL to avoid unexpected behavior. If you don't quote the URL, special characters such as spaces, ampersands, and question marks can be interpreted by the shell and cause issues. To quote the URL, you can use single quotes (') around the entire URL, or you can escape special characters using backslashes (\).
+- it's important to handle errors that may occur. For example, if you're using ping to check the availability of a remote server, the request may fail due to network issues or other factors. If you don't handle errors, your script may continue executing even if the request fails, which can cause unexpected behavior.
+  To handle errors, you can use conditional statements to check the exit status code of the net-util command ($?) and take appropriate action based on the result.
 
 # bash-script-tutorial
 
