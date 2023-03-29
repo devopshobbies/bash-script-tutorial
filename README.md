@@ -1,32 +1,24 @@
-# Session8
+# Session21
 
-## Challenge seven description
+## Challenge twenty description
 
-### Part 1: Bash Script with Arrays
+- Challenge 1:
+  You are running a Bash script and it keeps giving you an error message, but you can't figure out what the problem is. Write a command that will run the script with debugging enabled, so you can see what is causing the error.
 
-- Description: Write a Bash script that declares an array of 5 numbers and prints out the sum of the first and last elements of the array.
+- Challenge 2:
+  You are trying to debug a Bash script, but there are too many lines of output and it's hard to find the problem. Write a command that will filter the output to show only lines that contain the word "error".
 
-### Part 2: Bash Script with Loops
-
-- Description: Write a Bash script that prompts the user to enter a number between 1 and 10, and prints out the multiplication table of that number.
-
-### Part 3: Bash Script with Positional Arguments
-
-- Description: Write a Bash script that takes two positional arguments, a directory and an extension, and lists all files in the directory with the given extension.
-
-- Note : The special variable `$#` is used to get the number of arguments.
+- Challenge 3:
+  You have a Bash script that runs fine on your machine, but it fails when you run it on a remote server. Write a command that will SSH into the server, run the script with debugging enabled, and save the output to a local file.
 
 ### Hints to remember
 
-- When declaring an array in Bash, you can specify the values of its elements separated by spaces, as shown in the line cars=( "BMW" "Tesla" "Benz" "Pride" ).
+- **Not using the -x flag to enable debugging.**
+  When debugging Bash scripts, it's important to enable the -x flag, which prints each command and its arguments as they're executed. This can help you identify issues and errors in your script
 
-- To access the values of the elements in an array, you can use ${array_name[index]}, where array_name is the name of the array and index is the index of the element you want to access. For example, ${cars[1]} will give you the value of the second element in the cars array.
-
-- To loop through the elements of an array in Bash, you can use the syntax for item in ${array_name[@]}; do ... done. This will iterate over each element in the array and execute the commands inside the loop for each element.
-
-- The break statement inside a loop will cause the loop to terminate early, while the continue statement will skip the rest of the commands in the loop for the current iteration and move on to the next iteration.
-
-- To access the positional arguments passed to a Bash script, you can use the syntax $1, $2, etc., where $1 is the first argument, $2 is the second argument, and so on.
+- **Using echo instead of printf for debugging output.** When outputting debugging information to the console, it's important to use the printf command instead of echo. This is because echo may not properly handle special characters such as newlines, which can affect the readability of your debugging output.
+  To avoid this, use printf instead, like this: printf "Debugging information: %s\n" "$var".
+  You might have wondered why I used it, well ...:)
 
 # bash-script-tutorial
 
